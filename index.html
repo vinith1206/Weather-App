@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App by Vineeth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <header class="app-header">
+                <h1>🌤️ Weather App</h1>
+                <p class="subtitle">Get real-time weather information</p>
+            </header>
+
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="cityInput" placeholder="Enter city name..." class="city-input">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="wi wi-search"></i>
+                    </button>
+                </div>
+                <button id="locationBtn" class="location-btn">
+                    <i class="wi wi-location"></i>
+                    Use My Location
+                </button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <i class="wi wi-alien"></i>
+                <p id="errorMessage">City not found. Please try again.</p>
+            </div>
+
+            <div id="weatherCard" class="weather-card hidden">
+                <div class="weather-main">
+                    <div class="weather-icon">
+                        <i id="weatherIcon" class="wi"></i>
+                    </div>
+                    <div class="weather-info">
+                        <h2 id="cityName">City Name</h2>
+                        <p id="countryName">Country</p>
+                        <p id="weatherDescription">Description</p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="temperature">
+                        <span id="temperature">0</span>
+                        <span class="unit">°C</span>
+                    </div>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <i class="wi wi-humidity"></i>
+                            <div>
+                                <span class="label">Humidity</span>
+                                <span id="humidity" class="value">0%</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-strong-wind"></i>
+                            <div>
+                                <span class="label">Wind Speed</span>
+                                <span id="windSpeed" class="value">0 m/s</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-barometer"></i>
+                            <div>
+                                <span class="label">Pressure</span>
+                                <span id="pressure" class="value">0 hPa</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-sunrise"></i>
+                            <div>
+                                <span class="label">Sunrise</span>
+                                <span id="sunrise" class="value">00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div id="forecast" class="forecast-grid">
+                        <!-- Forecast items will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
