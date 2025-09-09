@@ -1,7 +1,7 @@
 // Weather App JavaScript
 class WeatherApp {
     constructor() {
-        this.apiKey = 'YOUR_API_KEY_HERE'; // You'll need to get this from OpenWeatherMap
+        this.apiKey = '9d3c95cae1cca281b9aee23020ffbaf0'; // You'll need to get this from OpenWeatherMap
         this.baseUrl = 'https://api.openweathermap.org/data/2.5';
         
         this.cityInput = document.getElementById('cityInput');
